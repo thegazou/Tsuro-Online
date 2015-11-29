@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+	<meta charset=utf-8>
+	<title>Tsuro</title>
+	<style>
+.tile { width: 100px; height: 100px; background: brown; }
+td { text-align:center; vertical-align: middle}
+	</style>
+	
+<h1>Tsuro</h1>
+<table>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos00"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos10"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos20"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos30"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos40"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos50"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos60"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos70"></div></td>
+	</tr>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos01"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos11"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos21"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos31"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos41"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos51"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos61"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos71"></div></td>
+	</tr>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos02"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos12"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos22"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos32"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos42"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos52"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos62"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos72"></div></td>
+	</tr>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos03"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos13"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos23"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos33"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos43"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos53"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos63"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos73"></div></td>
+	</tr>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos04"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos14"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos24"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos34"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos44"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos54"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos64"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos74"></div></td>
+	</tr>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos05"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos15"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos25"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos35"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos45"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos55"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos65"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos75"></div></td>
+	</tr>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos06"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos16"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos26"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos36"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos46"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos56"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos66"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos76"></div></td>
+	</tr>
+	<tr>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos07"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos17"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos27"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos37"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos47"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos57"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos67"></div></td>
+		<td colspan=2><div class="tile"><input type="checkbox" id="pos77"></div></td>
+	</tr>
+	
+</table>
+
+<br/>
+<input type ="button" id ="tile1"> </button><input type ="button" id ="tile2"> </button><input type ="button" id ="tile3"> </button>
+<br/>
+<input type ="button" id ="rotate1"> </button><input type ="button" id ="rotate2"> </button><input type ="button" id ="rotate3"> </button>
+<br/>
+<script>
+
+// CONSTRUCTEURS
+function Stack() {
+	this.tiles=[];
+	// toutes les tuiles non uniques contenant un "demi tour"
+	this.tiles[0]	= [0,1,2,3,4,6,5,7];
+	this.tiles[1]	= [0,1,2,3,4,6,5,7];
+	this.tiles[2]	= [0,1,2,3,4,7,5,6];
+	this.tiles[3]	= [0,1,2,3,4,7,5,6];
+	this.tiles[4]	= [0,1,2,4,3,6,5,7];
+	this.tiles[5]	= [0,1,2,4,3,6,5,7];
+	this.tiles[6]	= [0,1,2,4,3,7,5,6];
+	this.tiles[7]	= [0,1,2,4,3,7,5,6];
+	this.tiles[8]	= [0,1,2,5,3,6,4,7];
+	this.tiles[9]	= [0,1,2,5,3,6,4,7];
+	this.tiles[10]	= [0,1,2,5,3,7,4,6];
+	this.tiles[11]	= [0,1,2,5,3,7,4,6];
+	this.tiles[12]	= [0,1,2,6,3,4,5,7];
+	this.tiles[13]	= [0,1,2,6,3,4,5,7];
+	this.tiles[14]	= [0,1,2,6,3,5,4,7];
+	this.tiles[15]	= [0,1,2,6,3,5,4,7];
+	this.tiles[16]	= [0,1,2,6,3,7,4,5];
+	this.tiles[17]	= [0,1,2,6,3,7,4,5];
+	this.tiles[18]	= [0,1,2,7,3,4,5,6];
+	this.tiles[19]	= [0,1,2,7,3,4,5,6];
+	this.tiles[20]	= [0,1,2,7,3,5,4,6];
+	this.tiles[21]	= [0,1,2,7,3,5,4,6];
+	
+	// tuiles ne contenant pas de demi tour, mais contenant un "virage cavalier" --> 0 -> 2
+	this.tiles[22]	= [0,2,1,3,4,6,5,7];
+	this.tiles[23]	= [0,2,1,3,4,6,5,7];
+	this.tiles[24]	= [0,2,1,3,4,7,5,6];
+	this.tiles[25]	= [0,2,1,3,4,7,5,6];
+	this.tiles[26]	= [0,2,1,4,3,6,5,7];
+	this.tiles[27]	= [0,2,1,4,3,6,5,7];
+	this.tiles[28]	= [0,2,1,4,3,7,5,6];
+	this.tiles[29]	= [0,2,1,4,3,7,5,6];
+	this.tiles[30]	= [0,2,1,5,3,6,4,7];
+	this.tiles[31]	= [0,2,1,5,3,6,4,7];
+	this.tiles[32]	= [0,2,1,5,3,7,4,6];
+	this.tiles[33]	= [0,2,1,5,3,7,4,6];
+	this.tiles[34]	= [0,2,1,6,3,4,5,7];
+	this.tiles[35]	= [0,2,1,6,3,4,5,7];
+	this.tiles[36]	= [0,2,1,6,3,5,4,7];
+	this.tiles[37]	= [0,2,1,6,3,5,4,7];
+	this.tiles[38]	= [0,2,1,7,3,4,5,6];
+	this.tiles[39]	= [0,2,1,7,3,4,5,6];
+	this.tiles[40]	= [0,2,1,7,3,5,4,6];
+	this.tiles[41]	= [0,2,1,7,3,5,4,6];
+	// tuiles contenant des longs virages --> 0 -> 3
+	this.tiles[42]	= [0,3,1,2,4,7,5,6];
+	this.tiles[43]	= [0,3,1,2,4,7,5,6];
+	this.tiles[44]	= [0,3,1,4,2,6,5,7];
+	this.tiles[45]	= [0,3,1,4,2,6,5,7];
+	this.tiles[46]	= [0,3,1,4,2,7,5,6];
+	this.tiles[47]	= [0,3,1,4,2,7,5,6];
+	this.tiles[48]	= [0,3,1,5,2,6,4,7];
+	this.tiles[49]	= [0,3,1,5,2,6,4,7];
+	// tuiles à squiggelli --> 0-> 4
+	this.tiles[50]	= [0,4,1,2,3,7,5,6];
+	this.tiles[51]	= [0,4,1,2,3,7,5,6];
+	this.tiles[52]	= [0,4,1,3,2,6,5,7];
+	this.tiles[53]	= [0,4,1,3,2,6,5,7];
+	this.tiles[54]	= [0,4,1,3,2,7,5,6];
+	this.tiles[55]	= [0,4,1,3,2,7,5,6];
+	this.tiles[56]	= [0,4,1,5,3,7,2,6];
+	this.tiles[57]	= [0,4,1,5,3,7,2,6];
+	// tuiles uniques
+	this.tiles[58]	= [0,1,2,3,4,5,6,7];
+	this.tiles[59]	= [0,1,2,7,3,6,4,5];
+	this.tiles[60]	= [0,4,2,6,3,5,4,7];
+	this.tiles[61]	= [0,4,1,5,2,6,3,7];
+	this.tiles[62]	= [0,5,1,4,2,7,3,6];
+	this.tiles[63]	= [0,7,1,2,3,4,5,6];
+	}
+
+function Player(position, door) {
+	this.position = position;
+	this.door = door;
+	this.hand = [];
+	for (var i = 0; i<3;i++)
+		{
+		this.hand[i]=[];
+		}
+}
+
+function Board() {
+	this.tiles=[];
+	for(var i= 0; i<8;i++)
+	{
+		for (var j=0;j<8;j++)
+		{
+				this.tiles[[i,j]] = [-1];		}
+	}
+}
+
+// on échange, deux tuiles au hasard de position 413 fois
+Stack.prototype.shuffle = function(){
+for (var i = 0; i<413;i++)
+	{
+		var j = Math.floor(Math.random()*64);
+		var k = Math.floor(Math.random()*64);
+		var temp = this.tiles[j];
+		this.tiles[j] = this.tiles[k];
+		this.tiles[k] = temp;
+	}
+}
+
+Stack.prototype.pickATile= function(){
+
+	if (numberOfTilesInStack >0)
+	{
+		numberOfTilesInStack--;
+
+		return this.tiles[numberOfTilesInStack];
+	}
+	
+}
+
+// VARIABLES GLOBALES 
+var numberOfTilesInStack = 64;
+var board = new Board();
+console.log("La tuile en position "+i +","+j+" est :"+board.tiles[[i,j]]);
+var stack = new Stack
+var activePlayer = 0;
+stack.shuffle();
+// DP factory ? maybe ? 
+var player1 = new Player([2,0],1);
+var player2 = new Player([4,0],0);
+var player3 = new Player([2,7],4);
+var player4 = new Player([4,7],5);
+var player5 = new Player([0,2],7);
+var player6 = new Player([0,4],6);
+var player7 = new Player([7,2],2);
+var player8 = new Player([7,4],3);
+var playerList = [player1, player2, player3, player4, player5, player6, player7, player8];
+
+Player.prototype.drawTiles =function()
+	{
+		for (var i = 0; i<3;i++)
+			{
+				if (this.hand[i].length < 1) this.hand[i] = stack.pickATile();
+					
+			}
+	}
+	
+Board.prototype.playTile = function(x, y,tile)
+{
+	this.tiles[[x,y]] = tile;
+}
+
+
+Player.prototype.follow = function(tile) {
+
+	for (var i = 0; i<tile.length; i++)
+	{
+		
+		if (tile[i] == this.door)
+		{
+			this.door = tile[i+Math.pow(-1,i)]
+			i = tile.length;
+		}
+	}
+			switch (this.door)
+			{
+			case 0: 
+			case 1: this.position[1] -=1; break;
+			case 2: 
+			case 3: this.position[0] +=1; break;
+			case 4: 
+			case 5: this.position[1] +=1; break;
+			case 6: 
+			case 7: this.position[0] -=1; break;
+			default : break;
+			}
+			// 1 --> 4, 0--> 5, 2 --> 7, 3 --> 6
+			if (this.door == 1 || this.door == 5 ||this.door == 0 ||this.door == 4 ) this.door = 5-this.door;
+			else this.door = 9-this.door;
+			
+}
+
+Player.prototype.isStillinGame = function()
+{
+	return (this.position[0] >=0 && this.position[0]<8 &&this.position[1] >=0 && this.position[1]<8);
+}
+
+
+Player.prototype.moveOnBoard = function()
+{
+	
+	if(this.isStillinGame())
+	{		
+		if (board.tiles[[this.position[0],this.position[1]]][0] != -1)
+		{
+			this.follow(board.tiles[[this.position[0],this.position[1]]]);
+			this.moveOnBoard(board);
+		}
+	}
+	else if(!this.isStillinGame()) console.log("gameOver caused by player " +activePlayer);
+}
+
+function declareDraw()
+{
+	console.log("Player "+activePlayer+ " doomed us All, no one won" );
+}
+
+function declareWinner()
+{
+	console.log("We have a winner, and it is the player number "+ activePlayer);
+}
+
+function changeActivePlayer()
+{
+	var isTheGameWon = 0;
+	var datActivePlayer =-1;
+	for (var i=0;i<playerList.length;i++)
+	{
+		activePlayer+=1;
+		activePlayer %= playerList.length;
+		if (!playerList[activePlayer].isStillinGame())
+		{
+			console.log("The player :" +activePlayer+ "is eliminated");
+			isTheGameWon +=1;
+		}
+		else if (datActivePlayer == -1)
+		{
+			console.log("the next Active Player will be "+activePlayer);
+			datActivePlayer = activePlayer;
+		}
+		
+	}
+	
+	
+	console.log("isTheGameWon :" + isTheGameWon);
+	if (isTheGameWon == playerList.length)
+	{
+		declareDraw();
+	}
+	else if (isTheGameWon == playerList.length-1)
+	{
+		activePlayer = datActivePlayer;
+		declareWinner();
+	}
+	else
+	{
+		//TODO : changer l'affichage pour le prochain joueur
+		// en attendant : playATile(1) pour voir où ça mène ^^
+		activePlayer = datActivePlayer;
+		
+		if (numberOfTilesInStack >0) playerList[activePlayer].playATile(1);
+		else playerList[activePlayer].playATile(2);
+	}
+}
+
+	
+Player.prototype.playATile=function(index)
+	{
+		board.playTile(this.position[0],this.position[1],this.hand[index]);
+		this.hand[index] = [];
+		this.drawTiles();
+		for (var i=0; i<playerList.length; i++)
+		{
+			playerList[i].moveOnBoard();
+		}
+		changeActivePlayer();
+	}	
+
+
+	
+function rotate(tile, direction)
+	{
+	for (var i=0; i<tile.length;i++)
+		{
+			tile[i] = (tile[i]+8 + direction)%8;
+			
+		}
+	}
+
+// en appuyant sur un déclencheur, le joueur actif joue son prochain coup
+for (var i = 0; i<playerList.length;i++)
+{
+		console.log("Joueur :" +i);
+		playerList[i].drawTiles();
+}
+
+playerList[0].playATile(1);
+
+for (var i = 0; i<8;i++)
+{
+	for (var j = 0; j<8;j++)
+	{
+		console.log("La tuile en position "+i +","+j+" est :"+board.tiles[[i,j]]);
+	}
+}
+
+</script>
+
+	
+</html>
